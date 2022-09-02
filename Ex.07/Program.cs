@@ -14,7 +14,7 @@ namespace Ex._07
             Console.WriteLine("------------------------------------------------------------------------------------");
             Console.WriteLine("------------------ Programade Calculo da Metragem de um terreno --------------------");
             Console.WriteLine("------------------------------------------------------------------------------------");
-            double largura, comprimento, valorMetro;
+            double largura, comprimento, valorMetro, metroQ, totalMetro;
 
             Console.WriteLine(" Digite largura do terreno ");
             largura = double.Parse(Console.ReadLine(), CultureInfo.InvariantCulture);
@@ -25,12 +25,15 @@ namespace Ex._07
             Console.WriteLine(" Digite o Valor do Metro quadrado terreno  ");
             valorMetro = double.Parse(Console.ReadLine(), CultureInfo.InvariantCulture);
 
+            metroQ = largura * comprimento;
+            totalMetro = metroQ * valorMetro;
+
             Console.WriteLine();
             Console.Clear();
             Console.WriteLine("------------------------------- Calculando --------------------------------------");
 
-            Console.WriteLine($" Seu terreno tem " + largura * comprimento, CultureInfo.InvariantCulture);
-            Console.WriteLine(" Valor total do terreno e " + largura * comprimento * valorMetro, CultureInfo.InvariantCulture);
+            Console.WriteLine($" Seu terreno tem " + metroQ.ToString("F2"), CultureInfo.InvariantCulture);
+            Console.WriteLine(" Valor total do terreno e " + totalMetro.ToString("F2"),CultureInfo.InvariantCulture);
 
             Console.ReadLine();
         }
