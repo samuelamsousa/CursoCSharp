@@ -68,8 +68,8 @@ namespace URI___1021
             int R6C1 = int.Parse(RT601parametro[2]);
 
             int total = 0;
-            
-         
+
+
             if (R1C1 <= R1C2)
             {
                 total += R1C1;
@@ -77,15 +77,18 @@ namespace URI___1021
             else
             {
                 total += R1C2;
-            }
-            int[] tes = { R2C1, R2C2, R2C3 };
-            Array.Sort(tes);
-            int menor = tes.GetLowerBound(0);
 
-            /*if (R2C1 <= && R2C2 <= && R2C3)
+            }
+            if (R2C1 <= R2C2)
             {
-                total += R2C1;
-            }*/
+                
+            }
+            if(R2C1 <= R2C3) { }
+            if(R2C2 <= R2C1) { }
+            if(R2C2 <= R2C3) { }
+            if(R2C3 <= R2C1) { }
+            if(R2C3 < R2C2) { total += R2C1; }
+            else { total += R2C2; }
 
            if (R3C1 <= R3C2)
             {
@@ -114,7 +117,7 @@ namespace URI___1021
             }
             
             
-            Console.WriteLine(total + R6C1 + menor);
+            Console.WriteLine(total + R6C1 );
         }
     }
 
